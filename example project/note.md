@@ -27,8 +27,8 @@ adict = {
 ## 任务分解
 
 + [X] 提取字典adict里所有以'A'开头的键，返回为一个列表keys_A_list
-+ [ ] 按列表元素里的数字部分进行排序，返回顺序排列的列表ordered_keys_A_list
-+ [ ] 根据ordered_key_list提取adict里对应的值，返回一个列表values_A_list
++ [X] 按列表元素里的数字部分进行排序，返回顺序排列的列表ordered_keys_A_list
++ [X] 根据ordered_key_list提取adict里对应的值，返回一个列表values_A_list
 
 ## step 1: pick_keys_from_dict
 测试记录
@@ -69,3 +69,5 @@ sorted_list = sorted(mylist, key=lambda x: int(x[1:]))
 | {'a':1,'b':2,'c':3}, ['a','b'] | [1,2] | [1,2] | √ |
 
 测试 -> debug -> 修订 -> 测试
+
+## Wrap up
