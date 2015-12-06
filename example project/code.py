@@ -36,7 +36,18 @@ def sorted_list_by_number_inside(mylist):
         >>> sorted_list_by_number_inside(['A2', 'A5', 'A3'])
         ['A2', 'A3', 'A5']
     """
-    pass
+    sorted_list = sorted(mylist, key=lambda x: x[1:])
+    return sorted_list
+
+def test2():
+    """test for sorted_list_by_number_inside
+
+    """
+    print sorted_list_by_number_inside(['A5', 'A3', 'A2'])
+    # print sorted_list_by_number_inside(['A5', 'A20', 'A10'])
+    # print sorted_list_by_number_inside(['A2', 'A5', 'A3'])
+    # print sorted_list_by_number_inside(['A1', 'A11', 'A10'])
+
 
 
 def pick_values_from_dict(mydict, mylist):
@@ -61,4 +72,5 @@ def main():
 
 if __name__ == '__main__':
     # main()
-    test1()
+    # test1()
+    test2()
