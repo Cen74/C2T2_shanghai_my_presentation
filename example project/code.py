@@ -9,8 +9,19 @@ def pick_keys_from_dict(mydict):
     Return: 
         A list
     """
-    pass
+    mylist = []
+    for k in mydict:
+        if k.startswith('A'):
+            mylist.append(k)
+    return mylist
 
+def test1():
+    """test for pick_keys_from_dict
+
+    """
+    print pick_keys_from_dict({'A1':1,'B2':2,'C3':3})
+    print pick_keys_from_dict({'A1':1,'B2':2,'C3':3,'A4':4})
+    # assert pick_keys_from_dict({'A1':1,'B2':2,'C3':3}) == ['A1']
 
 def sorted_list_by_number_inside(mylist):
     """return a list sorted by the number inside the list element
@@ -49,4 +60,5 @@ def main():
     print values_A_list
 
 if __name__ == '__main__':
-    main()
+    # main()
+    test1()
