@@ -30,13 +30,13 @@ def sorted_list_by_number_inside(mylist):
         mylist (list)
 
     Return:
-        A dict
+        A list
 
     Example:
         >>> sorted_list_by_number_inside(['A2', 'A5', 'A3'])
         ['A2', 'A3', 'A5']
     """
-    sorted_list = sorted(mylist, key=lambda x: x[1:])
+    sorted_list = sorted(mylist, key=lambda x: int(x[1:]))
     return sorted_list
 
 def test2():
@@ -47,8 +47,7 @@ def test2():
     # print sorted_list_by_number_inside(['A5', 'A20', 'A10'])
     # print sorted_list_by_number_inside(['A2', 'A5', 'A3'])
     # print sorted_list_by_number_inside(['A1', 'A11', 'A10'])
-
-
+    # print sorted_list_by_number_inside(['AB5', 'AB3', 'AB2'])
 
 def pick_values_from_dict(mydict, mylist):
     """return a list of values of mydict according to keys in mylist
@@ -60,7 +59,17 @@ def pick_values_from_dict(mydict, mylist):
     return:
         A list
     """
-    pass
+    result = []
+    for k in mylist:
+        result.append(mydict[k])
+    return result
+
+def test3():
+    """test for pick_values_from_dict
+
+    """
+    print pick_values_from_dict({'a':1,'b':2,'c':3}, ['a','b'])
+    print pick_values_from_dict({'a':1,'b':2,'c':3}, ['a','b','d'])
 
 def main():
     adict = {'A1': 41, 'A3': 23, 'A9': 39, 'A10': 10, 
@@ -73,4 +82,5 @@ def main():
 if __name__ == '__main__':
     # main()
     # test1()
-    test2()
+    # test2()
+    test3()

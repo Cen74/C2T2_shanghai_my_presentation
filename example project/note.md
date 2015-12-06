@@ -62,3 +62,10 @@ sorted_list = sorted(mylist, key=lambda x: int(x[1:]))
 |---|---|---|---|---|
 | ['A5', 'A20', 'A10'] | ['A10', 'A20', 'A5'] | ['A10', 'A20', 'A5'] | √ |
 | ['AB5', 'AB3', 'AB2'] | ['AB2', 'AB3', 'AB5'] | |
+
+## step3: pick_values_from_dict
+| input | expected output | actual output | pass |
+|---|---|---|---|---|
+| {'a':1,'b':2,'c':3}, ['a','b'] | [1,2] | [1,2] | √ |
+
+测试 -> debug -> 修订 -> 测试
